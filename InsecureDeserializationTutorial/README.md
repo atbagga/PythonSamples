@@ -55,7 +55,7 @@ What happens if the serialise.user is replaced by a corrupt file. e.g. [serializ
 
 What happens if the serialise.user is replaced by a exploit file. e.g. [serialized.hack](https://github.com/atbagga/PythonSamples/blob/master/InsecureDeserializationTutorial/PythonPickleSample/serialized.hack)
 
-Try out the samples and find out. The sample [exploit](https://github.com/atbagga/PythonSamples/blob/master/InsecureDeserializationTutorial/PythonPickleSample/hackSerialize.py) will only create an empty file in your working directory. But the same can be used by an attacker to run any malicious code.
+Try out the [samples](https://github.com/atbagga/PythonSamples/tree/master/InsecureDeserializationTutorial) and find out. The sample [exploit](https://github.com/atbagga/PythonSamples/blob/master/InsecureDeserializationTutorial/PythonPickleSample/hackSerialize.py) will only create an empty file in your working directory. But the same can be used by an attacker to run any malicious code.
 
 ## How to guard against the attack?
 
