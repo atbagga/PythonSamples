@@ -11,9 +11,52 @@ Insecure Deserialisation is amongst the OWASP top 10 vulnerabilities list in las
 
 ## Sample code
 
+Serialisation 
 ```python
+import pickle
 
+class User(object):
+    def __init__(self, name):
+        self.name = name
+
+n1 = input("Enter your name: ")
+u1 = User(n1)
+
+serialized = pickle.dumps(u1)
+filename = 'serialized.user'
+
+with open(filename, 'wb') as fobj:
+    fobj.write(serialized)
+    fobj.flush()
+    fobj.close()
 ```
+
+Deserialisation
+
+```python
+import pickle
+
+class User(object):
+    def __init__(self, name):
+        self.name = name
+
+filename = input('Enter filename to deserialize: ')
+if not filename:
+    filename = 'serialized.user'
+
+with open(filename, 'rb') as fobj:
+    raw_data = fobj.read()
+
+deserialized = pickle.loads(raw_data)
+print(deserialized.name)
+```
+
+What happens if the serialise.user is replaced by a corrupt file. e.g. [serialized.corrupt](https://github.com/atbagga/PythonSamples/blob/master/InsecureDeserializationTutorial/PythonPickleSample/serialized.corrupt)?
+
+What happens if the serialise.user is replaced by a exploit file. e.g. [serialized.hack](https://github.com/atbagga/PythonSamples/blob/master/InsecureDeserializationTutorial/PythonPickleSample/serialized.hack)
+
+Try out the samples and find out. The sample [exploit](https://github.com/atbagga/PythonSamples/blob/master/InsecureDeserializationTutorial/PythonPickleSample/hackSerialize.py) will only create an empty file in your working directory. But the same can be used by an attacker to run any malicious code.
 
 ## How to guard against the attack?
 
+ToDo
