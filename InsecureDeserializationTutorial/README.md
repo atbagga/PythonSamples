@@ -60,3 +60,5 @@ Try out the [samples](https://github.com/atbagga/PythonSamples/tree/master/Insec
 ## How to guard against the attack?
 
 ToDo
+
+## Note: The vulnerability is not language specific and same can be used in other languages like Java, dotnet. [Read more](https://cwe.mitre.org/data/definitions/502.html)
