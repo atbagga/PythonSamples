@@ -57,6 +57,8 @@ What happens if the serialise.user is replaced by a exploit file. e.g. [serializ
 
 Try out the [samples](https://github.com/atbagga/PythonSamples/tree/master/InsecureDeserializationTutorial) and find out. The sample [exploit](https://github.com/atbagga/PythonSamples/blob/master/InsecureDeserializationTutorial/PythonPickleSample/hackSerialize.py) will only create an empty file in your working directory. But the same can be used by an attacker to run any malicious code.
 
+Even [official documentation for pickle](https://docs.python.org/3/library/pickle.html) highlights this security concern.
+
 ## How to guard against the attack?
 
 ToDo
